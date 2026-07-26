@@ -8,14 +8,28 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Resent"]
   spec.email         = ["hello@resent.one"]
 
-  spec.summary       = "Official Ruby SDK for Resent — send transactional email in a few lines"
+  spec.summary       = "Official Ruby SDK for Resent transactional email"
   spec.description   = <<~DESC
-    Official Ruby SDK for Resent transactional email.
+    Resent is the official Ruby client for resent.one — a transactional email API built for product and platform teams.
 
-    gem install resent
-    Then: Resent.new(ENV["RESENT_API_KEY"]).emails.send(...)
+    Install with: gem install resent  (or add gem "resent" to your Gemfile).
+
+    Create an API key in the Resent dashboard, set RESENT_API_KEY, then send mail with a few lines of Ruby:
+
+      require "resent"
+      resent = Resent.new(ENV.fetch("RESENT_API_KEY"))
+      resent.emails.send(
+        from: "Acme <noreply@yourdomain.com>",
+        to: "you@example.com",
+        subject: "Hello World",
+        html: "<strong>It works!</strong>"
+      )
+
+    Uses only Ruby stdlib (Net::HTTP + JSON) — no extra runtime gems. Supports html and/or text bodies, plus cc, bcc, and reply_to.
 
     Docs: https://developers.resent.one/sdks/ruby
+    Dashboard: https://resent.one
+    Source: https://github.com/resentmail/resent-ruby
   DESC
   spec.homepage      = "https://resent.one"
   spec.license       = "MIT"
