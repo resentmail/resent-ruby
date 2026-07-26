@@ -8,8 +8,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Resent"]
   spec.email         = ["hello@resent.one"]
 
-  spec.summary       = "Official Ruby SDK for Resent transactional email"
-  spec.description   = "Send transactional email with the Resent API from Ruby. Verify a domain, set RESENT_API_KEY, then call Resent::Client#emails.send."
+  spec.summary       = "Official Ruby SDK for Resent — send transactional email in a few lines"
+  spec.description   = <<~DESC
+    Official Ruby SDK for Resent transactional email.
+
+    gem install resent
+    Then: Resent.new(ENV["RESENT_API_KEY"]).emails.send(...)
+
+    Docs: https://developers.resent.one/sdks/ruby
+  DESC
   spec.homepage      = "https://resent.one"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
