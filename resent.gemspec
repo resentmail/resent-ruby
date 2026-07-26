@@ -32,8 +32,9 @@ Gem::Specification.new do |spec|
       "lib/**/*",
       "LICENSE",
       "README.md",
-      "assets/**/*"
+      "assets/banner.jpg"
     ]
   end
   spec.require_paths = ["lib"]
 end
+

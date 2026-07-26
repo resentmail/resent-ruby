@@ -1,7 +1,7 @@
 <p align="center">
   <img
     alt="Send emails with Ruby — Resent"
-    src="https://raw.githubusercontent.com/resentmail/resent-ruby/main/assets/banner.jpg?v=0.1.1"
+    src="https://raw.githubusercontent.com/resentmail/resent-ruby/main/assets/banner.jpg?v=0.1.2"
     width="100%"
   />
 </p>
